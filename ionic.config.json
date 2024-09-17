@@ -1,0 +1,7 @@
+{
+  "name": "hoang",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
