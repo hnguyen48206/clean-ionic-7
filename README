@@ -1,0 +1,70 @@
+-Course: https://www.udemy.com/course/ionic-2-the-practical-guide-to-building-ios-android-apps/learn/lecture/13751092#overview
+
+-RxJS: https://academind.com/tutorials/understanding-rxjs
+(\*) Note on Observable, Observer
+. Observable: a wrap up around some data (or data stream). 2 methods (next, error, complete)
+. Observer: watch over the changes of data from Observable including errors using SUBSCRIPTION.
+(\*) Some most common rxjs operator: throttletime, debouncetime, map, filter, scan, reduce
+(\*) Difference between debounce and throttle: throttle will emit value right away after everytime the interval ends and care about nothing else,
+debounce waits for the last event to finish, and emit value after the interval. Means if event keeps coming without any stop, then debounce
+also does not happen.
+DebounceTime usually comes together with distinctUntilChanged so We dont get repeative values.
+(\*) Difference between map / filter: filter is used to skip the emit of some specific value (you use boolean to decide).
+For map, it will transform every emit to something else before subsciber can get the value.
+(\*) Difference between reduce / scan:
+Both scan and reduce are used when you want to process both current item and the previous value.
+But scan emit every returned value after calculation while reduce only emit the last one only.
+(\*) Map and variants like MargeMap or SwitchMap:
+MargeMap is to combine the values of diffrent observable into a new value.
+SwitchMap is to replace the value of the outer obs with the inner obs. So the subsciber will only get the value of the
+second one. The special thing here is that everytime the obs 1 emit, the obs2 will start from the beginning.
+(\*) Chaining multiple operators with pipe:
+
+-IONIC:
+(_) To add android to the existing project: ionic capacitor add android
+(_) Whenever you build your web app, run this after that: ionic capacitor copy android
+(\*) To auto build/sync/launch emulator: ionic capacitor run android
+(\*) To live reload while debugging code with emulator: ionic capacitor run android -l --external
+(\*) ROUTING and LIFE CYCLE:
+![life cycle](image.png)
+(\*) App building: just do web build and sync. Then run: ionic cap open android --> open the studio
+REMEMBER to change appID and appName manually cause CAP wont do it automatically.
+For Android: check Manifest (for bundleID) and string.xml (for other names) and build.gradle (for app version)
+For iOS: check info.plist
+
+-ANDROID Specific:
+(\*) for debugging with emulator: use chrome with chrome://inspect/#devices
+
+-iOS Specific:
+(\*) Install xcode cli: xcode-select --install
+(\*) for debugging with emulator: use safari with menu develope --> simulator
+
+-IONIC Routing vs Angular Routing:
+(\*) The big difference is that IONIC Routing will cache pages in memory (no reloading) while angular will treat every navigation as new rendering.
+
+-CORDOVA:
+(_) list of plugins: https://danielsogl.gitbook.io/awesome-cordova-plugins
+(_) use cordova with capacitor:
+
+-DEPLOYs:
+(\*) Icon and splash screen generator:
+iOS: use Ape Tools - Image Gorilla. Then update files in foleder Assets/xassests (Xcode)
+Android: open Studio, right-click assets and choose New --> ImgAsset
+(\*) APP BUILD:
+Android: in studio, choose build menu --> generate signed bundle/apk
+
+-FLEX-BOX: 2 components which are container and item
+(\*) Container has following properties:
+flex-direction: row or column
+flex-wrap: auto move items to next line for responsiveness
+flex-flow
+justify-content: arrange items within main axis
+align-items: arrange items within cross axis
+align-content
+(\*) Item has the following properties:
+order: rearrange the item position within the items array
+flex-grow
+flex-shrink
+flex-basis:
+flex
+align-self: overide the align-items of container --> cross axis

@@ -1,0 +1,15 @@
+ion-col {
+  border: solid tomato 1px;
+}
+.my-flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.my-flex-item {
+  width: 100px;
+  height: 100px;
+  background: whitesmoke;
+  margin: 10px;
+  color: black;
+}
