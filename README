@@ -63,8 +63,8 @@ align-items: arrange items within cross axis
 align-content
 (\*) Item has the following properties:
 order: rearrange the item position within the items array
-flex-grow
-flex-shrink
-flex-basis:
-flex
+flex-grow: specify relative size for a specific item (ex set 2 as 2x larger than other items).
+flex-shrink: opposite of grow. When item shrink, it will follow this specification.
+flex-basis: specify minimum & absolute size for a specific item (either by pixel or percent). Item wont go below that size.
+flex: COMBINATION of grow-shrink-basis (exact order). Ex: 1 0 100px means 1 grow/ 0 shrink / 100px basis.
 align-self: overide the align-items of container --> cross axis
