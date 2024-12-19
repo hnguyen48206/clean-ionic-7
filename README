@@ -75,3 +75,4 @@ flex-shrink: opposite of grow. When item shrink, it will follow this specificati
 flex-basis: specify minimum & absolute size for a specific item (either by pixel or percent). Item wont go below that size.
 flex: COMBINATION of grow-shrink-basis (exact order). Ex: 1 0 100px means 1 grow/ 0 shrink / 100px basis.
 align-self: overide the align-items of container --> cross axis
+(\*) Docs: https://200lab.io/blog/flexbox-vs-grid/
