@@ -4,16 +4,23 @@
 (\*) Note on Observable, Observer
 . Observable: a wrap up around some data (or data stream). 2 methods (next, error, complete)
 . Observer: watch over the changes of data from Observable including errors using SUBSCRIPTION.
+Ex: https://jsfiddle.net/2eefj8Ld/
 (\*) Some most common rxjs operator: throttletime, debouncetime, map, filter, scan, reduce
 (\*) Difference between debounce and throttle: throttle will emit value right away after everytime the interval ends and care about nothing else,
 debounce waits for the last event to finish, and emit value after the interval. Means if event keeps coming without any stop, then debounce
 also does not happen.
 DebounceTime usually comes together with distinctUntilChanged so We dont get repeative values.
+Ex:
+Throttle
+https://jsfiddle.net/wo6yrhta/
+Debounce
+https://jsfiddle.net/chuuueL1/1/
 (\*) Difference between map / filter: filter is used to skip the emit of some specific value (you use boolean to decide).
 For map, it will transform every emit to something else before subsciber can get the value.
 (\*) Difference between reduce / scan:
 Both scan and reduce are used when you want to process both current item and the previous value.
 But scan emit every returned value after calculation while reduce only emit the last one only.
+Ex: https://jsfiddle.net/yu9efkhp/
 (\*) Map and variants like MargeMap or SwitchMap:
 MargeMap is to combine the values of diffrent observable into a new value.
 SwitchMap is to replace the value of the outer obs with the inner obs. So the subsciber will only get the value of the
